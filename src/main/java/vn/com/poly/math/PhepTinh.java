@@ -3,6 +3,13 @@ package vn.com.poly.math;
 import java.util.HashMap;
 
 public class PhepTinh {
+
+    public static int Tong(Integer a, Integer b) {
+        if (a <  Integer.MIN_VALUE || a >  Integer.MAX_VALUE ||b >  Integer.MAX_VALUE || b < Integer.MIN_VALUE) {
+            throw new IndexOutOfBoundsException("input invalid");
+        }
+        return a + b;
+    }
     public static int phepTong(int a, int b) {
         if (a == 0 || b == 0) {
             throw new IndexOutOfBoundsException("input invalid");

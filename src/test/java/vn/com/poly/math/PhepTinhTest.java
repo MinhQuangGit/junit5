@@ -42,6 +42,12 @@ class PhepTinhTest {
         Assertions.assertEquals(expect, PhepTinh.phepTong(1, 3));
     }
 
+    void tong_throwNullPointException() {
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            PhepTinh.Tong(0, null);
+        });
+    }
+
     @Test
     void phepTong_Failed_When_Input_null() {
         Assertions.assertThrows(IndexOutOfBoundsException.class, () -> {
